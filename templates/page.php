@@ -1,4 +1,7 @@
-<?php get_header(); ?>
+<?php
+// Appel du header
+get_header();
+?>
 
 <div id="primary" class="content-area">
     <main id="main" class="site-main">

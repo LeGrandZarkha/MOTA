@@ -1,12 +1,50 @@
 /*
-Theme Name: MOTA
-Theme URI: https://example.com/
-Author: Jérémy COCHARD
-Author URI: https://example.com/
-Description: Un thème WordPress personnalisé.
-Version: 1.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: custom, theme
-Text Domain: mota
-*/
+ * HEADER
+ */
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+header img {
+  width: 20%;
+  height: 45%;
+  border: solid 1px red;
+}
+header nav {
+  width: 30%;
+}
+header nav .nav-menu {
+  border: solid 1px blue;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+}
+header nav .nav-menu a {
+  text-decoration: none;
+  color: black;
+}
+
+/*
+ * MAIN CONTENT
+ */
+/*
+ * FOOTER
+ */
+.nav-menu-footer {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  list-style: none;
+}
+.nav-menu-footer a {
+  text-decoration: none;
+  color: black;
+}
+
+/*# sourceMappingURL=style.css.map */
