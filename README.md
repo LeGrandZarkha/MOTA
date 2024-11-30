@@ -8,7 +8,7 @@ Ceci est un thème wordpress développé dans le cadre du projet 11 du parcours 
 - Utilisation d'AJAX pour récupérer des données côté serveur, sans recharger la page pour une expérience plus fluide.
 - Utilisation de SASS pour le css, avec un fichier source map pour le déboggage.
 
-##Prérequis
+## PRÉREQUIS
 - Wordpress installé et configuré sur votre serveur local.
 - SASS installé si vous souhaitez modifier les styles.
 
@@ -21,5 +21,5 @@ Ceci est un thème wordpress développé dans le cadre du projet 11 du parcours 
 - Les fichiers SCCS se trouvent dans le dossier assets/css. Pour compiler ces fichiers, utilisez la commande `sass`.
 - Le fichier CSS généré est `style.css`, et est automatiquement chargé par Wordpress.
 
-##AUTEUR
+## AUTEUR
 - Développé par Jérémy Cochard, étudiant Développeur Wordpress chez OpenClassrooms.
