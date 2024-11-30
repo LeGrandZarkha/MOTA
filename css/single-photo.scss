@@ -15,7 +15,6 @@
 
             .photo-infos{
                 width: 48%;
-                height: 65%;
                 margin-top: 5%;
                 display: flex;
                 flex-direction: column;
@@ -24,9 +23,13 @@
                 border-bottom: 1px solid black;
 
                 h1{
-                    font-size: 5em;
-                    word-break: break-word;
-                    line-height: 80px;
+                    display: block;
+                    max-width: 70%;
+                    height: auto;
+                    font-size: 3.5rem;
+                    word-spacing: 0px;
+                    word-break: normal;
+                    line-height: 70px;
                     padding: 0;
                     margin-bottom: 30px;
                     font-family: 'Space Mono';
@@ -238,3 +241,135 @@
             }
         }
     }
+
+@media (max-width: 768px){
+
+    main{
+        .main-wrapper{
+            .wrapper-photo{
+                height: 100%;
+                flex-direction: column-reverse;
+                justify-content: center;
+                align-items: center;
+                .photo-img{
+                    width: 100%;
+                }
+                .photo-infos{
+                    width: 100%;
+                }
+            }
+            .wrapper-contact{
+                .contact-right{
+                    display: none;
+                }
+                .contact-left{
+                    flex-direction: column;
+                    justify-content: center;
+                    width: 100%;
+                    p{
+                        width: 100%;
+                        margin-bottom: 3%;
+                    }
+                    button{
+                        width: 100%;
+                    }
+                }
+            }
+            .wrapper-related-photos{
+                height: 100%;
+                margin-top: 2%;
+                p{
+                    text-align: center;
+                }
+                .related-photos{
+                    flex-direction: column;
+                    justify-content: space-between;
+                    gap: 30px;
+                    margin-top: 2%;
+                    .single-related-photo{
+                        width: 90%;
+                        height: 300px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 480px){
+
+    // MAIN CONTENT
+    .main-wrapper{
+        .wrapper-photo{
+            flex-direction: column-reverse;
+            justify-content: center;
+            height: 100%;
+            .photo-img{
+                margin: 0;
+                width: 100%;
+                object-fit: cover;
+            }
+            .photo-infos{
+                margin-top: 2%;
+                width: 100%;
+                h1{
+                    font-size: 2.3em;
+                    margin: 0;
+                    line-height: 100%;
+                    width: 100vw;
+                    max-width: 100%;
+                }
+                ul{
+                    li{
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+        .wrapper-contact{
+            .contact-left{
+                width: 100%;
+                p{
+                    width: 100%;
+                    font-size: 0.8em;
+                }
+                button{
+                    margin-top: 5%;
+                    width: 100%;
+                    height: 40px;
+                }
+            }
+            .contact-right{
+                display: none;
+            }
+        }
+        .wrapper-related-photos{
+            margin-top: 5%;
+            height: 100%;
+            .related-photos{
+                .single-related-photo{
+                    height: 300px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    // FOOTER
+    footer{
+        nav{
+            margin-top: 3%;
+            margin-bottom: 3%;
+            .menu-footer-container{
+                height: 100%;
+                #menu-footer{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
