@@ -23,7 +23,7 @@ $message = get_field('message', get_the_ID());
                 <input type="text" name="ref_photo" id="ref_photo" value="<?php echo esc_attr($ref_photo); ?>" readonly>
 
                 <label for="message">MESSAGE</label>
-                <input type="textarea" name="message" id="message" wrap='soft' value="<?php echo esc_attr($message); ?>">
+                <input type="textarea" name="message" id="message" cols='10' wrap='soft' value="<?php echo esc_attr($message); ?>">
 
                 <button type="submit" id="photo-contact-button">Envoyer</button>
             </form>

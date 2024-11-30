@@ -1,4 +1,4 @@
-<div class="lightbox-overlay" style="display: <?php echo $thumbnail_related_url ? 'flex' : 'none'; ?>;">
+<div class="lightbox-overlay">
     <div class="lightbox-arrow-left">
         <i class="fa-solid fa-arrow-left"></i>
         <p>Précédente</p>
