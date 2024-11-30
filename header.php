@@ -19,4 +19,10 @@
             ));
             ?>
         </nav>
+        <div class="burger-menu">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </div>
+        <div class="menu-area"></div>
     </header>
