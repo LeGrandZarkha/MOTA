@@ -63,7 +63,6 @@ wp_body_open();
             </div>
 
         </div>
-
         <div class="wrapper-contact">
             <div class="contact-left">
                 <p>Cette photo vous intéresse ?</p>
@@ -71,11 +70,41 @@ wp_body_open();
             </div>
             <div class="contact-right">
                 <div class="contact-right-photo">
-                    <img src="" alt="">
+                    <img id="thumbnail-image" src="<?php echo esc_url(get_field('thumbnail')); ?>" data-thumbnail="<?php echo esc_url(get_field('thumbnail')); ?>" alt="">
                 </div>
-                <div class="contact-right-arrows"></div>
+                <div class="contact-right-arrows">
+                    <?php
+                    // On récupère les articles
+                    $prev_post = get_adjacent_post(false, '', true);
+                    $next_post = get_adjacent_post(false, '', false);
+
+                    $prev_thumbnail_url = '';
+                    $next_thumbnail_url = '';
+
+                    // On récupère les miniatures
+                    if ($prev_post) {
+                        $prev_post_id = get_permalink($prev_post->ID);
+                        $prev_thumbnail_id = get_post_meta($prev_post->ID, 'thumbnail', true);
+                        $prev_thumbnail_url = $prev_thumbnail_id ? wp_get_attachment_url($prev_thumbnail_id) : '';
+                    }
+
+                    if ($next_post) {
+                        $next_post_id = get_permalink($next_post->ID);
+                        $next_thumbnail_id = get_post_meta($next_post->ID, 'thumbnail', true);
+                        $next_thumbnail_url = $next_thumbnail_id ? wp_get_attachment_url($next_thumbnail_id) : '';
+                    }
+                    ?>
+
+                    <div class="arrow-left" data-id-prev="<?php echo $prev_post_id ?>" data-thumbnail="<?php echo esc_url($prev_thumbnail_url); ?>">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </div>
+                    <div class="arrow-right" data-id-next="<?php echo $next_post_id ?>" data-thumbnail="<?php echo esc_url($next_thumbnail_url); ?>">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
             </div>
         </div>
+
 
         <div class="wrapper-related-photos">
             <p>VOUS AIMEREZ AUSSI</p>
@@ -86,6 +115,8 @@ wp_body_open();
     </div>
 
     <?php echo get_template_part('templates/popup'); ?>
+
+    <?php echo get_template_part('templates/lightbox'); ?>
 
     <script src="https://kit.fontawesome.com/7992438ddc.js" crossorigin="anonymous"></script>
 
